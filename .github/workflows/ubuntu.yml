@@ -44,6 +44,12 @@ jobs:
       - name: build ubuntu
         run: |
           chmod a+x syncSkia.sh
+          echo "++++PWD: ${PWD}++++++"
+          echo "+++++++++++++++++++++++++++++++++++++++++"
+          cat ./syncSkia.sh
+          echo "+++++++++++++++++++++++++++++++++++++++++"
+          ls -lh .
           ./syncSkia.sh
           qmake "CONFIG+=release"
           make
+          ls -lh .
